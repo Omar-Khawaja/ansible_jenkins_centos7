@@ -1,0 +1,10 @@
+---
+
+- name: Install Jenkins
+  hosts: nodes
+# You can change hosts to "all" or your group as it is
+# listed in /etc/ansible/hosts
+  remote_user: root
+
+  roles:
+    - install_jenkins
