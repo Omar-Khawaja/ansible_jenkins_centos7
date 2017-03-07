@@ -1,6 +1,6 @@
 ---
 
-- name: Set up jenkins repository
+- name: Set up Jenkins repository
   template: src=jenkins.repo.j2 dest=/etc/yum.repos.d/jenkins.repo
 
 - name: Import key from Jenkins-CI to enable installation of package
@@ -8,8 +8,8 @@
     state: present
     key: https://pkg.jenkins.io/redhat/jenkins.io.key
 
-- name: Install jenkins
+- name: Install Jenkins
   yum: name=jenkins state=installed
 
-- name: enable and start jenkins
+- name: enable and start Jenkins
   service: name=jenkins state=enabled state=started
