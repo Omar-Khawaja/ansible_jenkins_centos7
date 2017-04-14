@@ -1,7 +1,0 @@
----
-
-  hosts: localhost
-  user: root
-
-  roles:
-    - install_jenkins
